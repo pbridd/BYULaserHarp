@@ -30,35 +30,35 @@ snd8 = pygame.mixer.Sound("snd/c2.wav")
 
 def harp_callback_1(channel):
 	print "falling edge detected on 17"
-	pygame.mixer.Channel(1).play(snd1,0,0,0)
+	pygame.mixer.Channel(0).play(snd1,0,0,0)
 
 def harp_callback_2(channel):
 	print "falling edge detected on 27"
-	pygame.mixer.Channel(2).play(snd2,0,0,0)
+	pygame.mixer.Channel(1).play(snd2,0,0,0)
 
 def harp_callback_3(channel):
 	print "falling edge detected on 22"
-	pygame.mixer.Channel(3).play(snd3,0,0,0)
+	pygame.mixer.Channel(2).play(snd3,0,0,0)
 
 def harp_callback_4(channel):
 	print "falling edge detected on 5"
-	pygame.mixer.Channel(4).play(snd4,0,0,0)
+	pygame.mixer.Channel(3).play(snd4,0,0,0)
 
 def harp_callback_5(channel):
 	print "falling edge detected on 6"
-	pygame.mixer.Channel(5).play(snd5,0,0,0)
+	pygame.mixer.Channel(4).play(snd5,0,0,0)
 
 def harp_callback_6(channel):
 	print "falling edge detected on 13"
-	pygame.mixer.Channel(6).play(snd6,0,0,0)
+	pygame.mixer.Channel(5).play(snd6,0,0,0)
 
 def harp_callback_7(channel):
 	print "falling edge detected on 26"
-	pygame.mixer.Channel(7).play(snd7,0,0,0)
+	pygame.mixer.Channel(6).play(snd7,0,0,0)
 
 def harp_callback_8(channel):
 	print "falling edge detected on 23"
-	pygame.mixer.Channel(8).play(snd8,0,0,0)
+	pygame.mixer.Channel(7).play(snd8,0,0,0)
 
 def harp_callback_9(channel):
 	print "falling edge detected on 24"
