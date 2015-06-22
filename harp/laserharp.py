@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
 import pygame 
 
+debug = 0
+
 pygame.mixer.init()
 GPIO.setmode(GPIO.BOARD)
 
@@ -29,48 +31,60 @@ snd8 = pygame.mixer.Sound("snd/c2.wav")
 
 
 def harp_callback_1(channel):
-	print "falling edge detected on 11"
+	if debug == 1:
+		print "falling edge detected on 11"
 	pygame.mixer.Channel(0).play(snd1,0,0,0)
 
 def harp_callback_2(channel):
-	print "falling edge detected on 13"
+	if debug == 1:
+		print "falling edge detected on 13"
 	pygame.mixer.Channel(1).play(snd2,0,0,0)
 
 def harp_callback_3(channel):
-	print "falling edge detected on 15"
+	if debug == 1:
+		print "falling edge detected on 15"
 	pygame.mixer.Channel(2).play(snd3,0,0,0)
 
 def harp_callback_4(channel):
-	print "falling edge detected on 29"
+	if debug == 1:
+		print "falling edge detected on 29"
 	pygame.mixer.Channel(3).play(snd4,0,0,0)
 
 def harp_callback_5(channel):
-	print "falling edge detected on 31"
+	if debug == 1:
+		print "falling edge detected on 31"
 	pygame.mixer.Channel(4).play(snd5,0,0,0)
 
 def harp_callback_6(channel):
-	print "falling edge detected on 33"
+	if debug == 1:
+		print "falling edge detected on 33"
 	pygame.mixer.Channel(5).play(snd6,0,0,0)
 
 def harp_callback_7(channel):
-	print "falling edge detected on 35"
+	if debug == 1:
+		print "falling edge detected on 35"
 	pygame.mixer.Channel(6).play(snd7,0,0,0)
 
 def harp_callback_8(channel):
-	print "falling edge detected on 37"
+	if debug == 1:
+		print "falling edge detected on 37"
 	pygame.mixer.Channel(7).play(snd8,0,0,0)
 
 def harp_callback_9(channel):
-	print "falling edge detected on 16"
+	if debug == 1:
+		print "falling edge detected on 16"
 
 def harp_callback_10(channel):
-	print "falling edge detected on 18"
+	if debug == 1:
+		print "falling edge detected on 18"
 
 def harp_callback_11(channel):
-	print "falling edge detected on 22"
+	if debug == 1:
+		print "falling edge detected on 22"
 
 def harp_callback_12(channel):
-	print "falling edge detected on 32"
+	if debug == 1:
+		print "falling edge detected on 32"
 
 GPIO.add_event_detect(11, GPIO.FALLING, callback=harp_callback_1, bouncetime=200)
 GPIO.add_event_detect(13, GPIO.FALLING, callback=harp_callback_2, bouncetime=200)
