@@ -20,55 +20,55 @@ GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(32, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 #initialize variables
-snd1 = pygame.mixer.Sound("snd/c1.wav")
-snd2 = pygame.mixer.Sound("snd/d.wav")
-snd3 = pygame.mixer.Sound("snd/e.wav")
-snd4 = pygame.mixer.Sound("snd/f1.wav")
-snd5 = pygame.mixer.Sound("snd/g1.wav")
-snd6 = pygame.mixer.Sound("snd/a.wav")
-snd7 = pygame.mixer.Sound("snd/b.wav")
-snd8 = pygame.mixer.Sound("snd/c2.wav")
+note_C0 = pygame.mixer.Sound("snd/39187__jobro__piano-ff-040.wav")
+note_D0 = pygame.mixer.Sound("snd/39189__jobro__piano-ff-042.wav")
+note_E0 = pygame.mixer.Sound("snd/39191__jobro__piano-ff-044.wav")
+note_F0 = pygame.mixer.Sound("snd/39193__jobro__piano-ff-045.wav")
+note_G0 = pygame.mixer.Sound("snd/39195__jobro__piano-ff-047.wav")
+note_A0 = pygame.mixer.Sound("snd/39197__jobro__piano-ff-049.wav")
+note_B0 = pygame.mixer.Sound("snd/39199__jobro__piano-ff-051.wav")
+note_C1 = pygame.mixer.Sound("snd/39200__jobro__piano-ff-052.wav")
 
 
 def harp_callback_1(channel):
 	if debug == 1:
 		print "falling edge detected on 11"
-	pygame.mixer.Channel(0).play(snd1,0,0,0)
+	pygame.mixer.Channel(0).play(note_C0,0,0,0)
 
 def harp_callback_2(channel):
 	if debug == 1:
 		print "falling edge detected on 13"
-	pygame.mixer.Channel(1).play(snd2,0,0,0)
+	pygame.mixer.Channel(1).play(note_D0,0,0,0)
 
 def harp_callback_3(channel):
 	if debug == 1:
 		print "falling edge detected on 15"
-	pygame.mixer.Channel(2).play(snd3,0,0,0)
+	pygame.mixer.Channel(2).play(note_E0,0,0,0)
 
 def harp_callback_4(channel):
 	if debug == 1:
 		print "falling edge detected on 29"
-	pygame.mixer.Channel(3).play(snd4,0,0,0)
+	pygame.mixer.Channel(3).play(note_F0,0,0,0)
 
 def harp_callback_5(channel):
 	if debug == 1:
 		print "falling edge detected on 31"
-	pygame.mixer.Channel(4).play(snd5,0,0,0)
+	pygame.mixer.Channel(4).play(note_G0,0,0,0)
 
 def harp_callback_6(channel):
 	if debug == 1:
 		print "falling edge detected on 33"
-	pygame.mixer.Channel(5).play(snd6,0,0,0)
+	pygame.mixer.Channel(5).play(note_A0,0,0,0)
 
 def harp_callback_7(channel):
 	if debug == 1:
 		print "falling edge detected on 35"
-	pygame.mixer.Channel(6).play(snd7,0,0,0)
+	pygame.mixer.Channel(6).play(note_B0,0,0,0)
 
 def harp_callback_8(channel):
 	if debug == 1:
 		print "falling edge detected on 37"
-	pygame.mixer.Channel(7).play(snd8,0,0,0)
+	pygame.mixer.Channel(7).play(note_C1,0,0,0)
 
 def harp_callback_9(channel):
 	if debug == 1:
@@ -86,18 +86,18 @@ def harp_callback_12(channel):
 	if debug == 1:
 		print "falling edge detected on 32"
 
-GPIO.add_event_detect(11, GPIO.FALLING, callback=harp_callback_1, bouncetime=200)
-GPIO.add_event_detect(13, GPIO.FALLING, callback=harp_callback_2, bouncetime=200)
-GPIO.add_event_detect(15, GPIO.FALLING, callback=harp_callback_3, bouncetime=200)
-GPIO.add_event_detect(29, GPIO.FALLING, callback=harp_callback_4, bouncetime=200)
-GPIO.add_event_detect(31, GPIO.FALLING, callback=harp_callback_5, bouncetime=200)
-GPIO.add_event_detect(33, GPIO.FALLING, callback=harp_callback_6, bouncetime=200)
-GPIO.add_event_detect(35, GPIO.FALLING, callback=harp_callback_7, bouncetime=200)
-GPIO.add_event_detect(37, GPIO.FALLING, callback=harp_callback_8, bouncetime=200)
-GPIO.add_event_detect(16, GPIO.FALLING, callback=harp_callback_9, bouncetime=200)
-GPIO.add_event_detect(18, GPIO.FALLING, callback=harp_callback_10, bouncetime=200)
-GPIO.add_event_detect(22, GPIO.FALLING, callback=harp_callback_11, bouncetime=200)
-GPIO.add_event_detect(32, GPIO.FALLING, callback=harp_callback_12, bouncetime=200)
+GPIO.add_event_detect(11, GPIO.FALLING, callback=harp_callback_1, bouncetime=75)
+GPIO.add_event_detect(13, GPIO.FALLING, callback=harp_callback_2, bouncetime=75)
+GPIO.add_event_detect(15, GPIO.FALLING, callback=harp_callback_3, bouncetime=75)
+GPIO.add_event_detect(29, GPIO.FALLING, callback=harp_callback_4, bouncetime=75)
+GPIO.add_event_detect(31, GPIO.FALLING, callback=harp_callback_5, bouncetime=75)
+GPIO.add_event_detect(33, GPIO.FALLING, callback=harp_callback_6, bouncetime=75)
+GPIO.add_event_detect(35, GPIO.FALLING, callback=harp_callback_7, bouncetime=75)
+GPIO.add_event_detect(37, GPIO.FALLING, callback=harp_callback_8, bouncetime=75)
+GPIO.add_event_detect(16, GPIO.FALLING, callback=harp_callback_9, bouncetime=75)
+GPIO.add_event_detect(18, GPIO.FALLING, callback=harp_callback_10, bouncetime=75)
+GPIO.add_event_detect(22, GPIO.FALLING, callback=harp_callback_11, bouncetime=75)
+GPIO.add_event_detect(32, GPIO.FALLING, callback=harp_callback_12, bouncetime=75)
 
 while True:
 	pass
